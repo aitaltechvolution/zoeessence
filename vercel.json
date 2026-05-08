@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "output",
+  "framework": null,
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/_server/:path*",
+      "destination": "/api/server"
+    },
+    {
+      "source": "/((?!assets/|favicon.ico).*)",
+      "destination": "/api/server"
+    }
+  ]
+}
