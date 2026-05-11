@@ -1,7 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Phone, MessageCircle } from "lucide-react";
+import { Instagram, Facebook, Phone, MessageCircle, Music2 } from "lucide-react";
 import logo from "../../assets/zoeessence logo sm.png"
 
+
+const items= [
+     { icon: Phone, label: "Phone", value: "0814 440 8429", href: "tel:08144408429" },
+     { icon: Phone, label: "Phone", value: "0802 342 1095", href: "tel:08023421095" },
+    { icon: MessageCircle, label: "WhatsApp", value: "0814 440 8429", href: "https://wa.me/2348144408429" },
+    { icon: Instagram, label: "Instagram", value: "@__zoeessence", href: "https://instagram.com/__zoeessence" },
+    { icon: Music2, label: "TikTok", value: "@_zoeessence", href: "https://tiktok.com/@_zoeessence" },
+    { icon: Facebook, label: "Facebook", value: "Zoe Essence", href: "https://facebook.com/" },
+  
+]
 
 export function Footer() {
   return (
@@ -23,11 +33,24 @@ export function Footer() {
 
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] mb-4">Explore</h4>
-          <ul className="space-y-2.5 text-sm text-muted-foreground">
-            <li><Link to="/shop" className="hover:text-foreground">Shop</Link></li>
-            <li><Link to="/about" className="hover:text-foreground">About</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
-          </ul>
+          <div className="space-y-2.5 text-sm text-muted-foreground">
+                   {items.map((it) => (
+          <a
+            key={it.label}
+            href={it.href}
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-center gap-1 hover-lift"
+          >
+            <div className="h-11 w-11 flex items-center justify-center bg-secondary group-hover:bg-gold/20 transition-colors">
+              <it.icon className="h-3 w-3" />
+            </div>
+            <div>
+              <p className="font-serif mt-1">{it.value}</p>
+            </div>
+          </a>
+        ))}
+          </div>
         </div>
 
         <div>
@@ -36,6 +59,7 @@ export function Footer() {
             <li className="flex items-center gap-2"><Phone className="h-3.5 w-3.5" /> 0814 440 8429</li>
             <li className="flex items-center gap-2"><MessageCircle className="h-3.5 w-3.5" /> WhatsApp: 0814 440 8429</li>
             <li className="flex items-center gap-2"><Instagram className="h-3.5 w-3.5" /> @__zoeessence</li>
+            <li className="flex items-center gap-2"><Facebook className="h-3.5 w-3.5" /> Zoe Essence</li>
             <li className="flex items-center gap-2"><Facebook className="h-3.5 w-3.5" /> Zoe Essence</li>
           </ul>
         </div>
