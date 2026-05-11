@@ -43,7 +43,7 @@ export function Footer() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] mb-4">Connect</h4>
      <div className="space-y-2.5 text-muted-foreground">
-                   {items.map((it) => (
+          {items.map((it) => (
           <a
             key={it.label}
             href={it.href}
