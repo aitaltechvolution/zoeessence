@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/zoeessence logo sm.png"
 
 const links = [
   { to: "/", label: "Home" },
@@ -15,8 +16,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/60">
       <div className="container-zoe flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="font-serif text-2xl md:text-3xl tracking-wide">
-          Zoe<span className="text-gold"> Essence</span>
+
+        <Link to="/" className="w-2/12  lg:w-1/12">
+          <img src={logo} alt="Zoe Essence Logo"  className="w-full md:w-7/12 lg:w-full"/>
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">

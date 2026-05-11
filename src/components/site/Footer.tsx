@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Phone, MessageCircle } from "lucide-react";
+import logo from "../../assets/zoeessence logo sm.png"
+
 
 export function Footer() {
   return (
@@ -7,7 +9,11 @@ export function Footer() {
       <div className="container-zoe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="font-serif text-3xl">
-            Zoe<span className="text-gold"> Essence</span>
+            {/* Zoe<span className="text-gold"> Essence</span> */}
+            
+            
+            <img src={logo} alt="Zoe Essence Logo"  className="w-5/12"/>
+
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Contemporary fashion crafted with intention. Made-to-order garments,
