@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Phone, MessageCircle, Music2 } from "lucide-react";
+import { Instagram, Facebook, Phone, MessageCircle, Music2, Mail } from "lucide-react";
 import logo from "../../assets/zoeessence logo sm.png"
 
 
 const items= [
-     { icon: Phone, label: "Phone", value: "0814 440 8429", href: "tel:08144408429" },
      { icon: Phone, label: "Phone", value: "0802 342 1095", href: "tel:08023421095" },
     { icon: MessageCircle, label: "WhatsApp", value: "0814 440 8429", href: "https://wa.me/2348144408429" },
+    { icon: Mail, label: "Email", value: "hello.zoeessence@gmail.com", href: "mailto:hello.zoeessence@gmail.com" },
     { icon: Instagram, label: "Instagram", value: "@__zoeessence", href: "https://instagram.com/__zoeessence" },
     { icon: Music2, label: "TikTok", value: "@_zoeessence", href: "https://tiktok.com/@_zoeessence" },
     { icon: Facebook, label: "Facebook", value: "Zoe Essence", href: "https://facebook.com/" },
@@ -19,11 +19,7 @@ export function Footer() {
       <div className="container-zoe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="font-serif text-3xl">
-            {/* Zoe<span className="text-gold"> Essence</span> */}
-            
-            
             <img src={logo} alt="Zoe Essence Logo"  className="w-5/12"/>
-
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Contemporary fashion crafted with intention. Made-to-order garments,
@@ -45,7 +41,7 @@ export function Footer() {
      <div className="space-y-2.5 text-muted-foreground">
           {items.map((it) => (
           <a
-            key={it.label}
+            key={it.href}
             href={it.href}
             target="_blank"
             rel="noreferrer"

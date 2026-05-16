@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
-import { Phone, MessageCircle, Instagram, Facebook, Music2 } from "lucide-react";
+import { Phone, MessageCircle, Instagram, Facebook, Music2, Mail } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -18,6 +18,7 @@ function ContactPage() {
   const items = [
     { icon: Phone, label: "Phone", value: "0814 440 8429 · 0802 342 1095", href: "tel:08144408429" },
     { icon: MessageCircle, label: "WhatsApp", value: "0814 440 8429", href: "https://wa.me/2348144408429" },
+    { icon: Mail, label: "Email", value: "hello.zoeessence@gmail.com", href: "mailto:hello.zoeessence@gmail.com" },
     { icon: Instagram, label: "Instagram", value: "@__zoeessence", href: "https://instagram.com/__zoeessence" },
     { icon: Music2, label: "TikTok", value: "@_zoeessence", href: "https://tiktok.com/@_zoeessence" },
     { icon: Facebook, label: "Facebook", value: "Zoe Essence", href: "https://facebook.com/" },
@@ -38,7 +39,7 @@ function ContactPage() {
       <section className="container-zoe pb-24 grid sm:grid-cols-2 gap-5">
         {items.map((it) => (
           <a
-            key={it.label}
+            key={it.href}
             href={it.href}
             target="_blank"
             rel="noreferrer"
